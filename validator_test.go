@@ -40,9 +40,9 @@ func TestIsAlpha(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", true},  //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", false}, //UTF-8(ASCII): 0
+		{"\u0070", true},  // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", false}, // UTF-8(ASCII): 0
 		{"123", false},
 		{"0123", false},
 		{"-00123", false},
@@ -100,9 +100,9 @@ func TestIsUTFLetter(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", true},  //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", false}, //UTF-8(ASCII): 0
+		{"\u0070", true},  // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", false}, // UTF-8(ASCII): 0
 		{"123", false},
 		{"0123", false},
 		{"-00123", false},
@@ -161,9 +161,9 @@ func TestIsAlphanumeric(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", true},  //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", true},  //UTF-8(ASCII): 0
+		{"\u0070", true},  // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", true},  // UTF-8(ASCII): 0
 		{"123", true},
 		{"0123", true},
 		{"-00123", false},
@@ -220,9 +220,9 @@ func TestIsUTFLetterNumeric(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", true},
 		{"\ufff0", false},
-		{"\u0070", true},  //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", true},  //UTF-8(ASCII): 0
+		{"\u0070", true},  // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", true},  // UTF-8(ASCII): 0
 		{"123", true},
 		{"0123", true},
 		{"-00123", false},
@@ -279,9 +279,9 @@ func TestIsNumeric(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", false}, //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", true},  //UTF-8(ASCII): 0
+		{"\u0070", false}, // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", true},  // UTF-8(ASCII): 0
 		{"123", true},
 		{"0123", true},
 		{"-00123", false},
@@ -340,9 +340,9 @@ func TestIsUTFNumeric(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", false}, //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", true},  //UTF-8(ASCII): 0
+		{"\u0070", false}, // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", true},  // UTF-8(ASCII): 0
 		{"123", true},
 		{"0123", true},
 		{"-00123", true},
@@ -399,9 +399,9 @@ func TestIsUTFDigit(t *testing.T) {
 		{"달기&Co.", false},
 		{"〩Hours", false},
 		{"\ufff0", false},
-		{"\u0070", false}, //UTF-8(ASCII): p
-		{"\u0026", false}, //UTF-8(ASCII): &
-		{"\u0030", true},  //UTF-8(ASCII): 0
+		{"\u0070", false}, // UTF-8(ASCII): p
+		{"\u0026", false}, // UTF-8(ASCII): &
+		{"\u0030", true},  // UTF-8(ASCII): 0
 		{"123", true},
 		{"0123", true},
 		{"-00123", true},
@@ -574,18 +574,18 @@ func TestIsInt(t *testing.T) {
 		param    string
 		expected bool
 	}{
-		{"-2147483648", true},          //Signed 32 Bit Min Int
-		{"2147483647", true},           //Signed 32 Bit Max Int
-		{"-2147483649", true},          //Signed 32 Bit Min Int - 1
-		{"2147483648", true},           //Signed 32 Bit Max Int + 1
-		{"4294967295", true},           //Unsigned 32 Bit Max Int
-		{"4294967296", true},           //Unsigned 32 Bit Max Int + 1
-		{"-9223372036854775808", true}, //Signed 64 Bit Min Int
-		{"9223372036854775807", true},  //Signed 64 Bit Max Int
-		{"-9223372036854775809", true}, //Signed 64 Bit Min Int - 1
-		{"9223372036854775808", true},  //Signed 64 Bit Max Int + 1
-		{"18446744073709551615", true}, //Unsigned 64 Bit Max Int
-		{"18446744073709551616", true}, //Unsigned 64 Bit Max Int + 1
+		{"-2147483648", true},          // Signed 32 Bit Min Int
+		{"2147483647", true},           // Signed 32 Bit Max Int
+		{"-2147483649", true},          // Signed 32 Bit Min Int - 1
+		{"2147483648", true},           // Signed 32 Bit Max Int + 1
+		{"4294967295", true},           // Unsigned 32 Bit Max Int
+		{"4294967296", true},           // Unsigned 32 Bit Max Int + 1
+		{"-9223372036854775808", true}, // Signed 64 Bit Min Int
+		{"9223372036854775807", true},  // Signed 64 Bit Max Int
+		{"-9223372036854775809", true}, // Signed 64 Bit Min Int - 1
+		{"9223372036854775808", true},  // Signed 64 Bit Max Int + 1
+		{"18446744073709551615", true}, // Unsigned 64 Bit Max Int
+		{"18446744073709551616", true}, // Unsigned 64 Bit Max Int + 1
 		{"", true},
 		{"123", true},
 		{"0", true},
@@ -1435,6 +1435,7 @@ func TestIsUUID(t *testing.T) {
 		{"987fbc9-4bed-3078-cf07a-9141ba07c9f3", false},
 		{"aaaaaaaa-1111-1111-aaag-111111111111", false},
 		{"a987fbc9-4bed-3078-cf07-9141ba07c9f3", true},
+		{"A987FBC9-4BED-3078-CF07-9141BA07C9F3", true},
 	}
 	for _, test := range tests {
 		actual := IsUUID(test.param)
@@ -1453,6 +1454,7 @@ func TestIsUUID(t *testing.T) {
 		{"xxxa987fbc9-4bed-3078-cf07-9141ba07c9f3", false},
 		{"a987fbc9-4bed-4078-8f07-9141ba07c9f3", false},
 		{"a987fbc9-4bed-3078-cf07-9141ba07c9f3", true},
+		{"A987FBC9-4BED-3078-CF07-9141BA07C9F3", true},
 	}
 	for _, test := range tests {
 		actual := IsUUIDv3(test.param)
@@ -1472,6 +1474,7 @@ func TestIsUUID(t *testing.T) {
 		{"934859", false},
 		{"57b73598-8764-4ad0-a76a-679bb6640eb1", true},
 		{"625e63f3-58f5-40b7-83a1-a72ad31acffb", true},
+		{"625E63F3-58F5-40B7-83A1-A72AD31ACFFB", true},
 	}
 	for _, test := range tests {
 		actual := IsUUIDv4(test.param)
@@ -1492,6 +1495,7 @@ func TestIsUUID(t *testing.T) {
 		{"a987fbc9-4bed-3078-cf07-9141ba07c9f3", false},
 		{"987fbc97-4bed-5078-af07-9141ba07c9f3", true},
 		{"987fbc97-4bed-5078-9f07-9141ba07c9f3", true},
+		{"987FBC97-4BED-5078-9F07-9141BA07C9F3", true},
 	}
 	for _, test := range tests {
 		actual := IsUUIDv5(test.param)
@@ -2067,7 +2071,7 @@ func TestFilePath(t *testing.T) {
 		expected bool
 		osType   int
 	}{
-		{"c:\\" + strings.Repeat("a", 32767), true, Win}, //See http://msdn.microsoft.com/en-us/library/aa365247(VS.85).aspx#maxpath
+		{"c:\\" + strings.Repeat("a", 32767), true, Win}, // See http://msdn.microsoft.com/en-us/library/aa365247(VS.85).aspx#maxpath
 		{"c:\\" + strings.Repeat("a", 32768), false, Win},
 		{"c:\\path\\file (x86)\bar", true, Win},
 		{"c:\\path\\file", true, Win},
@@ -2102,7 +2106,7 @@ func TestIsWinFilePath(t *testing.T) {
 		param    string
 		expected bool
 	}{
-		{"c:\\" + strings.Repeat("a", 32767), true}, //See http://msdn.microsoft.com/en-us/library/aa365247(VS.85).aspx#maxpath
+		{"c:\\" + strings.Repeat("a", 32767), true}, // See http://msdn.microsoft.com/en-us/library/aa365247(VS.85).aspx#maxpath
 		{"c:\\" + strings.Repeat("a", 32768), false},
 		{"c:\\path\\file (x86)\\bar", true},
 		{"c:\\path\\file", true},
@@ -2130,11 +2134,11 @@ func TestIsUnixFilePath(t *testing.T) {
 		param    string
 		expected bool
 	}{
-		{"c:/path/file/", true},    //relative path
-		{"../path/file/", true},    //relative path
-		{"../../path/file/", true}, //relative path
-		{"./path/file/", true},     //relative path
-		{"./file.dghdg", true},     //relative path
+		{"c:/path/file/", true},    // relative path
+		{"../path/file/", true},    // relative path
+		{"../../path/file/", true}, // relative path
+		{"./path/file/", true},     // relative path
+		{"./file.dghdg", true},     // relative path
 		{"/path/file/", true},
 		{"/path/file:SAMPLE/", true},
 		{"/path/file:/.txt", true},
@@ -3428,7 +3432,7 @@ func ExampleValidateStruct() {
 	}
 	post := &Post{"My Example Post", "duck", "123.234.54.3"}
 
-	//Add your own struct validation tags
+	// Add your own struct validation tags
 	TagMap["duck"] = Validator(func(str string) bool {
 		return str == "duck"
 	})
@@ -3799,15 +3803,15 @@ func TestIsRegex(t *testing.T) {
 		{"a{6,3}", false},
 		{"a|b", true},
 		{"a|b|", true},
-		{"a|b||", true}, //But false in python RE
+		{"a|b||", true}, // But false in python RE
 		{"(?:)", true},
-		{"(?)", true}, //But false in python RE
+		{"(?)", true}, // But false in python RE
 		{"?", false},
 		{"(?::?)", true},
 		{"(?:?)", false},
 		{"(()?)", true},
 		{"(?:?)", false},
-		{"(A conditional matching)? (?(1)matched|not matched)", false}, //But true in python RE
+		{"(A conditional matching)? (?(1)matched|not matched)", false}, // But true in python RE
 		{"(A conditional matching)? (?(2)matched|not matched)", false},
 		{"(?:A conditional matching)? (?(1)matched|not matched)", false},
 		{"(?:[a-z]+)?", true},
